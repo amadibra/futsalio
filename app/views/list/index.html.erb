@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<%= render 'layouts/header' %>
+
+            <div class="container">
+                <div class="row page-title text-center wow bounce"  data-wow-delay="1s">
+                  <h5>Futsal Fields</h5>
+                    <h2><span>8</span> Available fields</h2>
+                </div>
+                <div class="row jobs">
+                    <div class="col-md-12">
+                        <div class="job-posts table-responsive">
+                            <table class="table">
+                              <% params[:place_name].each_with_index do |futsal_place, index| %>
+                                <% if index%2 == 0 %>
+                                  <tr class="odd wow fadeInUp" data-wow-delay="1s">
+                                    <td class="tbl-logo"><img src="img/job-logo1.png" alt=""></td>
+                                    <td class="tbl-title"><h4> <%= futsal_place["nama"] %></h4></td>
+                                    <td><p>dribbble community</p></td>
+                                    <td><p><i class="icon-location"></i>Pondok China</p></td>
+                                    <td><p>Rp 150.000/Hour</p></td>
+                                    <td class="tbl-apply"><a href="detail.html">Book now</a></td>
+                                  </tr>
+                                <% else %>
+                                  <tr class="even wow fadeInUp" data-wow-delay="1s">
+                                    <td class="tbl-logo"><img src="img/job-logo1.png" alt=""></td>
+                                    <td class="tbl-title"><h4> <%= futsal_place["nama"] %></h4></td>
+                                    <td><p>dribbble community</p></td>
+                                    <td><p><i class="icon-location"></i>Pondok China</p></td>
+                                    <td><p>Rp 150.000/Hour</p></td>
+                                    <td class="tbl-apply"><a href="detail.html">Book now</a></td>
+                                  </tr>
+                                <%  end %>
+                              <%  end %>
+                                <!-- <tr class="odd wow fadeInUp" data&#45;wow&#45;delay="1s"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo1.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Liverpool Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>dribbble community</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Pondok China</p></td> -->
+                                <!--     <td><p>Rp 150.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="even wow fadeInUp" data&#45;wow&#45;delay="1.1s"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo2.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Arena Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Jolil corporation</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Kelapa Dua</p></td> -->
+                                <!--     <td><p>Rp 125.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="odd wow fadeInUp" data&#45;wow&#45;delay="1.2s"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo3.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Oase Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Fanta bevarage</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Kukusan</p></td> -->
+                                <!--     <td><p>Rp 120.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="even wow fadeInUp" data&#45;wow&#45;delay="1.3s"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo4.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Brumbun Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Google</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Kukusan</p></td> -->
+                                <!--     <td><p>Rp 80.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="odd wow fadeInUp" data&#45;wow&#45;delay="1.4s"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo5.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Andik Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Microsoft</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Margonda Raya</p></td> -->
+                                <!--     <td><p>Rp 180.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="even hide&#45;jobs"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo4.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Futsal City <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Google</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>San Franciso, USA</p></td> -->
+                                <!--     <td><p>Rp 160.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="odd hide&#45;jobs"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo5.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Halim Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Microsoft</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Lubang Buaya</p></td> -->
+                                <!--     <td><p>Rp 150.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="detail.html">Book now</a></td> -->
+                                <!-- </tr> -->
+                                <!-- <tr class="even hide&#45;jobs"> -->
+                                <!--     <td class="tbl&#45;logo"><img src="img/job&#45;logo4.png" alt=""></td> -->
+                                <!--     <td class="tbl&#45;title"><h4>Metro Futsal <br><span class="job&#45;type">full time</span></h4></td> -->
+                                <!--     <td><p>Google</p></td> -->
+                                <!--     <td><p><i class="icon&#45;location"></i>Kebayoran</p></td> -->
+                                <!--     <td><p>Rp 200.000/Hour</p></td> -->
+                                <!--     <td class="tbl&#45;apply"><a href="#">Book now</a></td> -->
+                                <!-- </tr> -->
+                            </table>
+                        </div>
+                        <div class="more-jobs">
+                            <a href=""> <i class="fa fa-refresh"></i>View more available</a>
+                        </div>
+                    </div>
+                    <!--div class="col-md-3 hidden-sm">
+                        <div class="job-add wow fadeInRight" data-wow-delay="1.5s">
+                            <h2>Seeking a job?</h2>
+                            <a href="#">Create a Account</a>
+                        </div>
+                    </div-->
+                </div>
+            </div>
+            <hr>
+<%= render 'layouts/footer' %>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Futsal.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <%= stylesheet_link_tag "normalize.css" %>
+  <%= stylesheet_link_tag "font-awesome.min.css" %>
+  <%= stylesheet_link_tag "fontello.css" %>
+  <%= stylesheet_link_tag "animate.css" %>
+  <%= stylesheet_link_tag "bootstrap.min.css" %>
+  <%= stylesheet_link_tag "owl.carousel.css" %>
+  <%= stylesheet_link_tag "owl.theme.css" %>
+  <%= stylesheet_link_tag "owl.transitions.css" %>
+  <%= stylesheet_link_tag "style.css" %>
+  <%= stylesheet_link_tag "responsive.css" %>
+<%= javascript_include_tag('vendor/modernizr-2.6.2.min.js') %>
+</head>
+<body id="body_register">
+
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <!-- Body content -->
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="button navbar-right">
+          <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.8s">Login</button>
+          <a href='/register/index'><button class="navbar-btn nav-button wow fadeInRight" data-wow-delay="0.6s">Sign up</button></a>
+        </div>
+        <ul class="main-nav nav navbar-nav navbar-right">
+          <li class="wow fadeInDown" data-wow-delay="0s"><a class="active" href="#">Home</a></li>
+          <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="#">Field List</a></li>
+          <li class="wow fadeInDown" data-wow-delay="0.2s"><a href="#">Book</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<div class="container" id="container_register">
+    <h1 class="well">Registration Form</h1>
+  <div class="col-lg-12 well">
+    <div class="row">
+
+      <form method="post" action="save">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Username</label>
+                <input name="username" type="text" class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Password</label>
+                <input name="user_password" type="password" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter City Name Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>State</label>
+                <input type="text" placeholder="Enter State Name Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>Zip</label>
+                <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Title</label>
+                <input type="text" placeholder="Enter Designation Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Company</label>
+                <input type="text" placeholder="Enter Company Name Here.." class="form-control">
+              </div>
+            </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="text" placeholder="Enter Email Address Here.." class="form-control">
+          </div>
+          <button type="submit" class="btn btn-lg btn-info">Submit</button>
+          </div>
+        </form>
+        </div>
+  </div>
+  </div>
+
+  <div class="footer-area">
+    <div class="container">
+      <div class="row footer">
+            <div class="col-md-6">
+              <div class="single-footer">
+                <!--h4>Twitter update</h4-->
+                <!--div class="twitter-updates"-->
+                <div class="single-tweets">
+                  <h5>ABOUT 9 HOURS</h5>
+                  <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion, less coupling and greater dev speed <a href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                </div>
+                <!--/div-->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-footer">
+                <!--h4>Useful lnks</h4-->
+                <!--div class="footer-links"-->
+                <ul class="list-unstyled">
+                  <li><a href="">About Us</a></li>
+                  <li><a href="" class="active">Services</a></li>
+                  <li><a href="">Contact Us</a></li>
+                </ul>
+                <!--/div-->
+              </div>
+            </div>
+    </div>
+    <!--div class="row footer-copy">
+      <p><span>(C) webstie, All rights reserved</span> | <span>Graphic Designed by <a href="https://dribbble.com/siblu">Eftakher Alam</a></span> | <span> Web Designed by <a href="http://ohidul.me">Ohidul Islam</a></span> </p>
+      </div-->
+      </div>
+      </div>
+
+
+
+
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      <%= javascript_include_tag('bootstrap.min.js') %>
+      <%= javascript_include_tag('owl.carousel.min.js') %>
+      <%= javascript_include_tag('wow.js') %>
+      <%= javascript_include_tag('main.js') %>
+</body>
+</html>

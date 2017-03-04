@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nama: MyString
+  id_tempat_futsal: 1
+  satuan_sewa: 1
+  jenis: MyString
+  jam_tutup: 2017-01-09 21:03:55
+  jam_buka: 2017-01-09 21:03:55
+  harga_satuan: 1
+
+two:
+  nama: MyString
+  id_tempat_futsal: 1
+  satuan_sewa: 1
+  jenis: MyString
+  jam_tutup: 2017-01-09 21:03:55
+  jam_buka: 2017-01-09 21:03:55
+  harga_satuan: 1

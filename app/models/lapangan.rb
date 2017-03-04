@@ -1,0 +1,2 @@
+class Lapangan < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Kotum < ApplicationRecord
+end

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_order: 1
+  satuan_sewa: 1
+  id_lapangan: 1
+  lama_sewa: 2017-01-09 21:08:04
+  harga_satuan: 1
+  end: 2017-01-09 21:08:04
+  start: 2017-01-09 21:08:04
+  total: 1
+
+two:
+  id_order: 1
+  satuan_sewa: 1
+  id_lapangan: 1
+  lama_sewa: 2017-01-09 21:08:04
+  harga_satuan: 1
+  end: 2017-01-09 21:08:04
+  start: 2017-01-09 21:08:04
+  total: 1
