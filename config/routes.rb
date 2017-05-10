@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'book/index'
+
   get 'list/index'
 
   get 'sessions/new'
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   get 'register/index'
 
   get 'home/index'
+
+  get 'detail/index'
 
   post 'register/save'
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<%= render 'layouts/header' %>
+     <header class="business-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <h1 class="tagline"><%= @futsal_place %></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Billiard and Futsal Field</h2>
+                <p>Introduce the visitor to the business using clear, informative text. Use well-targeted keywords within your sentences to make sure search engines can find the business.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestiae similique eligendi reiciendis sunt distinctio odit? Quia, neque, ipsa, adipisci quisquam ullam deserunt accusantium illo iste exercitationem nemo voluptates asperiores.</p>
+                <p>
+                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Contact Us</h2>
+                <address>
+                    <strong>Start Bootstrap</strong>
+                    <br>3481 Melrose Place
+                    <br>Beverly Hills, CA 90210
+                    <br>
+                </address>
+                <address>
+                    <abbr title="Phone">P:</abbr>(123) 456-7890
+                    <br>
+                    <abbr title="Email">E:</abbr> <a href="mailto:#">name@example.com</a>
+                </address>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <div class="row">
+          <% @lapangan.each_with_index do |lapangan, index| %>
+            <div class="col-sm-4">
+                <%= link_to image_tag("/images/sintetis.jpg", border: 0, width: 256, height: 256), {action: 'index', controller: 'book', lapangan_id: lapangan["id"]}, {class: 'img-circle img-responsive img-center'} %>
+                <h2><%= lapangan["nama"] %></h2>
+                <p>Lapangan Rumput Sintetis.</p></center>
+            </div>
+          <% end %>
+            <!-- <div class="col&#45;sm&#45;4"> -->
+            <!--     <%= link_to image_tag("/images/vinil.jpg", border: 0, width: 256, height: 256), {action: 'index', controller: 'book', place_id: @futsal_id}, {class: 'img&#45;circle img&#45;responsive img&#45;center'} %> -->
+            <!--     <h2>Lapangan 2</h2> -->
+            <!--     <p>Lapngan Rumput Vinil.</p></center> -->
+            <!-- </div> -->
+            <!-- <div class="col&#45;sm&#45;4"> -->
+            <!--     <%= link_to image_tag("/images/sintetis.jpg", border: 0, width: 256, height: 256), {action: 'index', controller: 'book', place_id: @futsal_id}, {class: 'img&#45;circle img&#45;responsive img&#45;center'} %> -->
+            <!--     <h2>Lapangan 3</h2> -->
+            <!--     <p>Lapngan Rumput Sintetis.</p></center> -->
+            <!-- </div> -->
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+    </div>
+<%= render 'layouts/footer' %>
