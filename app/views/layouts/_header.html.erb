@@ -1,87 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+
+
+<!-- Mirrored from remtsoy.com/tf_templates/traveler/demo_v1_7/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 May 2017 14:11:07 GMT -->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Futsal.io</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FUTSALIO - Home</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="keywords" content="Template, html, premium, themeforest" />
+    <meta name="description" content="Traveler - Premium template for travel companies">
+    <meta name="author" content="Tsoy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <%= stylesheet_link_tag "normalize.css" %>
-  <%= stylesheet_link_tag "font-awesome.min.css" %>
-  <%= stylesheet_link_tag "fontello.css" %>
-  <%= stylesheet_link_tag "animate.css" %>
-  <%= stylesheet_link_tag "bootstrap.min.css" %>
-  <%= stylesheet_link_tag "owl.carousel.css" %>
-  <%= stylesheet_link_tag "owl.theme.css" %>
-  <%= stylesheet_link_tag "owl.transitions.css" %>
-  <%= stylesheet_link_tag "style.css" %>
-  <%= stylesheet_link_tag "responsive.css" %>
-<%= javascript_include_tag('vendor/modernizr-2.6.2.min.js') %>
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
+    <!-- /GOOGLE FONTS -->
+    <%= stylesheet_link_tag "futsalio/bootstrap.css" %>
+    <%= stylesheet_link_tag "futsalio/font-awesome.css" %>
+    <%= stylesheet_link_tag "futsalio/icomoon.css" %>
+    <%= stylesheet_link_tag "futsalio/styles.css" %>
+    <%= stylesheet_link_tag "futsalio/mystyles.css" %>
+    <%= stylesheet_link_tag "futsalio/form.css" %>
+
+    <%= stylesheet_link_tag "futsalio/bootstrap-datepicker/css/bootstrap-datepicker3.css" %>
+    <%= stylesheet_link_tag "futsalio/select2/css/select2.css" %>
+    <%= stylesheet_link_tag "futsalio/select2-bootstrap-theme/select2-bootstrap.min.css" %>
+    <%= stylesheet_link_tag "futsalio/bootstrap-multiselect/bootstrap-multiselect.css" %>
+    <%= stylesheet_link_tag "futsalio/bootstrap-tagsinput/bootstrap-tagsinput.css" %>
+    <%= stylesheet_link_tag "futsalio/bootstrap-colorpicker/css/bootstrap-colorpicker.css" %>
+    <%= stylesheet_link_tag "futsalio/bootstrap-timepicker/css/bootstrap-timepicker.css" %>
+    <%= stylesheet_link_tag "futsalio/bootstrap-markdown/css/bootstrap-markdown.min.css" %>
+    <%= javascript_include_tag('futsalio/modernizr.js') %>
+
+    <!-- <link rel="stylesheet" href="css/switcher.css" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/bright&#45;turquoise.css" title="bright&#45;turquoise" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/turkish&#45;rose.css" title="turkish&#45;rose" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/salem.css" title="salem" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/hippie&#45;blue.css" title="hippie&#45;blue" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/mandy.css" title="mandy" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/green&#45;smoke.css" title="green&#45;smoke" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/horizon.css" title="horizon" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/cerise.css" title="cerise" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/brick&#45;red.css" title="brick&#45;red" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/de&#45;york.css" title="de&#45;york" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/shamrock.css" title="shamrock" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/studio.css" title="studio" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/leather.css" title="leather" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/denim.css" title="denim" media="all" /> -->
+    <!-- <link rel="alternate stylesheet" type="text/css" href="css/schemes/scarlet.css" title="scarlet" media="all" /> -->
 </head>
+
 <body>
-  <%  if flash[:notice] %>
-    <script>alert("<%= flash[:notice] %>");window.location.href="/home/index"</script>
-  <% end %>
-  <%  if flash[:danger] %>
-    <script>alert("<%= flash[:danger] %>");window.location.href="/home/index"</script>
-  <% end %>
 
-  <div id="preloader">
-    <div id="status">&nbsp;</div>
-  </div>
-  <!-- Body content -->
+    <!-- FACEBOOK WIDGET -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- /FACEBOOK WIDGET -->
+    <div class="global-wrap">
+        <!-- <div class="demo_changer" id="demo_changer">
+            <div class="demo-icon fa fa-sliders"></div>
+            <div class="form_holder">
+                <div class="line"></div>
+                <p>Color Scheme</p>
+                <div class="predefined_styles" id="styleswitch_area">
+                    <a class="styleswitch" href="index-4c392.html?default=true" style="background:#ED8323;"></a>
+                    <a class="styleswitch" href="#" data-src="bright-turquoise" style="background:#0EBCF2;"></a>
+                    <a class="styleswitch" href="#" data-src="turkish-rose" style="background:#B66672;"></a>
+                    <a class="styleswitch" href="#" data-src="salem" style="background:#12A641;"></a>
+                    <a class="styleswitch" href="#" data-src="hippie-blue" style="background:#4F96B6;"></a>
+                    <a class="styleswitch" href="#" data-src="mandy" style="background:#E45E66;"></a>
+                    <a class="styleswitch" href="#" data-src="green-smoke" style="background:#96AA66;"></a>
+                    <a class="styleswitch" href="#" data-src="horizon" style="background:#5B84AA;"></a>
+                    <a class="styleswitch" href="#" data-src="cerise" style="background:#CA2AC6;"></a>
+                    <a class="styleswitch" href="#" data-src="brick-red" style="background:#cf315a;"></a>
+                    <a class="styleswitch" href="#" data-src="de-york" style="background:#74C683;"></a>
+                    <a class="styleswitch" href="#" data-src="shamrock" style="background:#30BBB1;"></a>
+                    <a class="styleswitch" href="#" data-src="studio" style="background:#7646B8;"></a>
+                    <a class="styleswitch" href="#" data-src="leather" style="background:#966650;"></a>
+                    <a class="styleswitch" href="#" data-src="denim" style="background:#1A5AE4;"></a>
+                    <a class="styleswitch" href="#" data-src="scarlet" style="background:#FF1D13;"></a>
+                </div>
+                <div class="line"></div>
+                <p>Layout</p>
+                <div class="predefined_styles"><a class="btn btn-sm" href="#" id="btn-wide">Wide</a><a class="btn btn-sm" href="#" id="btn-boxed">Boxed</a>
+                </div>
+                <div class="line"></div>
+                <p>Background Patterns</p>
+                <div class="predefined_styles" id="patternswitch_area">
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/binding_light.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/binding_dark.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/dark_fish_skin.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/dimension.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/escheresque_ste.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/food.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/giftly.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/grey_wash_wall.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/ps_neutral.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/pw_maze_black.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/pw_pattern.png);"></a>
+                    <a class="patternswitch" href="#" style="background-image: url(img/patterns/simple_dashed.png);"></a>
+                </div>
+                <div class="line"></div>
+                <p>Background Images</p>
+                <div class="predefined_styles" id="bgimageswitch_area">
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/bike.jpg);" data-src="img/backgrounds/bike.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/flowers.jpg);" data-src="img/backgrounds/flowers.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/wood.jpg);" data-src="img/backgrounds/wood.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/taxi.jpg);" data-src="img/backgrounds/taxi.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/phone.jpg);" data-src="img/backgrounds/phone.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/road.jpg);" data-src="img/backgrounds/road.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/keyboard.jpg);" data-src="img/backgrounds/keyboard.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/beach.jpg);" data-src="img/backgrounds/beach.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/street.jpg);" data-src="img/backgrounds/street.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/nature.jpg);" data-src="img/backgrounds/nature.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/bridge.jpg);" data-src="img/backgrounds/bridge.jpg"></a>
+                    <a class="bgimageswitch" href="#" style="background-image: url(img/switcher/cameras.jpg);" data-src="img/backgrounds/cameras.jpg"></a>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div> -->
+        <header id="main-header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a class="logo" href="index.html">
+                                <img src="img/futsalio.png" style="max-height: 42px" alt="Image Alternative text" title="Image Title" />
+                            </a>
+                        </div>
+                        <!-- <div class="col-md-6">
+                            <form class="main-header-search">
+                                <div class="form-group form-group-icon-left">
+                                    <i class="fa fa-search input-icon"></i>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </form>
+                        </div> -->
+                        <div class="col-md-9">
+                            <div class="top-user-area clearfix">
+                                <ul class="top-user-area-list list list-horizontal list-border">
+                                    <li class="top-user-area-avatar">
+                                        <a href="user-profile.html">
+                                            <img class="origin round" src="img/amaze_40x40.jpg" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                                    </li>
+                                    <li><a href="#">Sign Out</a>
+                                    </li>
+                                    <!-- <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                                        <ul class="list nav-drop-menu">
+                                            <li><a href="#">EUR<span class="right">€</span></a>
+                                            </li>
+                                            <li><a href="#">GBP<span class="right">£</span></a>
+                                            </li>
+                                            <li><a href="#">JPY<span class="right">円</span></a>
+                                            </li>
+                                            <li><a href="#">CAD<span class="right">$</span></a>
+                                            </li>
+                                            <li><a href="#">AUD<span class="right">A$</span></a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                    <!-- <li class="top-user-area-lang nav-drop">
+                                        <a href="#">
+                                            <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                        </a>
+                                        <ul class="list nav-drop-menu">
+                                            <li>
+                                                <a title="German" href="#">
+                                                    <img src="img/flags/32/de.png" alt="Image Alternative text" title="Image Title" /><span class="right">GER</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Japanise" href="#">
+                                                    <img src="img/flags/32/jp.png" alt="Image Alternative text" title="Image Title" /><span class="right">JAP</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Italian" href="#">
+                                                    <img src="img/flags/32/it.png" alt="Image Alternative text" title="Image Title" /><span class="right">ITA</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="French" href="#">
+                                                    <img src="img/flags/32/fr.png" alt="Image Alternative text" title="Image Title" /><span class="right">FRE</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Russian" href="#">
+                                                    <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">RUS</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Korean" href="#">
+                                                    <img src="img/flags/32/kr.png" alt="Image Alternative text" title="Image Title" /><span class="right">KOR</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav">
 
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="button navbar-right">
-          <% if logged_in? %>
-            <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.8s" href="#" data-toggle="modal" onclick="location.href='/logout'">Logout</button>
-          <% else %>
-            <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.8s" href="#" data-target="#login-modal" data-toggle="modal">Login</button>
-          <% end %>
-          <button class="navbar-btn nav-button wow fadeInRight" data-wow-delay="0.6s" onclick="location.href='/register/index'">Sign up</button>
-        </div>
-        <ul class="main-nav nav navbar-nav navbar-right">
-          <li class="wow fadeInDown" data-wow-delay="0s"><a class="active" href="/home/index">Home</a></li>
-          <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="/list/index">Field List</a></li>
-          <li class="wow fadeInDown" data-wow-delay="0.2s"><a href="#">Book</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-      <div class="loginmodal-container">
-        <h1>Login to Your Account</h1><br>
-        <form action="/login" method="post">
-          <input type="text" name="session[username]" placeholder="Username">
-          <input type="password" name="session[password]" placeholder="Password">
-          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-        </form>
-
-        <div class="login-help">
-          <a href="#">Register</a> - <a href="#">Forgot Password</a>
-        </div>
-      </div>
-    </div>
-  </div>
+                </div>
+            </div>
+        </header>
 

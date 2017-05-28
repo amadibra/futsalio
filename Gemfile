@@ -37,9 +37,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'rename'
 gem 'rails_db'
 gem 'ransack', '1.7.0'
-gem 'bcrypt', '3.1.11'
-# gem 'bcrypt', platforms: :ruby
+#gem 'bcrypt', '3.1.11'
+gem 'bcrypt', platforms: :ruby
 gem 'pry'
+
+gem 'sprockets-rails', '2.3.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
