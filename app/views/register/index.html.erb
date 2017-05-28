@@ -1,170 +1,159 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE HTML>
+<html class="full">
+
+
+<!-- Mirrored from remtsoy.com/tf_templates/traveler/demo_v1_7/login-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 May 2017 14:14:26 GMT -->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Futsal.io</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FUTSALIO - Login Register
+    </title>
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="keywords" content="Template, html, premium, themeforest" />
+    <meta name="description" content="Traveler - Premium template for travel companies">
+    <meta name="author" content="Tsoy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <%= stylesheet_link_tag "normalize.css" %>
-  <%= stylesheet_link_tag "font-awesome.min.css" %>
-  <%= stylesheet_link_tag "fontello.css" %>
-  <%= stylesheet_link_tag "animate.css" %>
-  <%= stylesheet_link_tag "bootstrap.min.css" %>
-  <%= stylesheet_link_tag "owl.carousel.css" %>
-  <%= stylesheet_link_tag "owl.theme.css" %>
-  <%= stylesheet_link_tag "owl.transitions.css" %>
-  <%= stylesheet_link_tag "style.css" %>
-  <%= stylesheet_link_tag "responsive.css" %>
-<%= javascript_include_tag('vendor/modernizr-2.6.2.min.js') %>
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
+    <!-- /GOOGLE FONTS -->
+    <%= stylesheet_link_tag "futsalio/bootstrap.css" %>
+    <%= stylesheet_link_tag "futsalio/font-awesome.css" %>
+    <%= stylesheet_link_tag "futsalio/icomoon.css" %>
+    <%= stylesheet_link_tag "futsalio/styles.css" %>
+    <%= stylesheet_link_tag "futsalio/mystyles.css" %>
+    <%= javascript_include_tag('futsalio/modernizr.js') %>
 </head>
-<body id="body_register">
 
-  <div id="preloader">
-    <div id="status">&nbsp;</div>
-  </div>
-  <!-- Body content -->
+<body class="full">
 
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
-      </div>
+    <%  if flash[:notice] %>
+      <script>alert("<%= flash[:notice] %>");</script>
+    <% end %>
+    <%  if flash[:danger] %>
+      <script>alert("<%= flash[:danger] %>");</script>
+    <% end %>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="button navbar-right">
-          <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.8s">Login</button>
-          <a href='/register/index'><button class="navbar-btn nav-button wow fadeInRight" data-wow-delay="0.6s">Sign up</button></a>
-        </div>
-        <ul class="main-nav nav navbar-nav navbar-right">
-          <li class="wow fadeInDown" data-wow-delay="0s"><a class="active" href="#">Home</a></li>
-          <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="#">Field List</a></li>
-          <li class="wow fadeInDown" data-wow-delay="0.2s"><a href="#">Book</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-<div class="container" id="container_register">
-    <h1 class="well">Registration Form</h1>
-  <div class="col-lg-12 well">
-    <div class="row">
-
-      <form method="post" action="save">
-          <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <label>Username</label>
-                <input name="username" type="text" class="form-control">
-              </div>
-              <div class="col-sm-6 form-group">
-                <label>Password</label>
-                <input name="user_password" type="password" class="form-control">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Address</label>
-              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
-            </div>
-            <div class="row">
-              <div class="col-sm-4 form-group">
-                <label>City</label>
-                <input type="text" placeholder="Enter City Name Here.." class="form-control">
-              </div>
-              <div class="col-sm-4 form-group">
-                <label>State</label>
-                <input type="text" placeholder="Enter State Name Here.." class="form-control">
-              </div>
-              <div class="col-sm-4 form-group">
-                <label>Zip</label>
-                <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <label>Title</label>
-                <input type="text" placeholder="Enter Designation Here.." class="form-control">
-              </div>
-              <div class="col-sm-6 form-group">
-                <label>Company</label>
-                <input type="text" placeholder="Enter Company Name Here.." class="form-control">
-              </div>
-            </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="text" placeholder="Enter Email Address Here.." class="form-control">
-          </div>
-          <button type="submit" class="btn btn-lg btn-info">Submit</button>
-          </div>
-        </form>
-        </div>
-  </div>
-  </div>
-
-  <div class="footer-area">
-    <div class="container">
-      <div class="row footer">
-            <div class="col-md-6">
-              <div class="single-footer">
-                <!--h4>Twitter update</h4-->
-                <!--div class="twitter-updates"-->
-                <div class="single-tweets">
-                  <h5>ABOUT 9 HOURS</h5>
-                  <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion, less coupling and greater dev speed <a href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+    <!-- FACEBOOK WIDGET -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- /FACEBOOK WIDGET -->
+    <div class="global-wrap">
+        
+        <div class="full-page">
+            <div class="bg-holder full">
+                <div class="bg-mask"></div>
+                <div class="bg-img" style="background-color: black"></div>
+                <div class="bg-holder-content full text-white">
+                    <a class="logo-holder" href="index.html">
+                        <img src="/img/futsalio.png" style="max-height: 42px" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                    <div class="full-center">
+                        <div class="container">
+                            <div class="row row-wrap" data-gutter="60">
+                                <div class="col-md-4">
+                                    <div class="visible-lg">
+                                        <h3 class="mb15">Welcome to Futsalio</h3>
+                                        <p>Est nisl facilisis consectetur eget fermentum rutrum suscipit penatibus ultrices eu bibendum mi volutpat mattis cum facilisis nunc platea tincidunt vehicula laoreet montes parturient urna magnis eu etiam eget integer</p>
+                                        <p>Nullam consectetur fames erat scelerisque ac conubia orci mauris facilisi</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3 class="mb15">Masuk</h3>
+                                    <form action="/login" method="post">
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-envelope input-icon input-icon-show"></i>
+                                            <label>Email</label>
+                                            <input name="session[username]" class="form-control" placeholder="e.g. johndoe@gmail.com" type="text" />
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left" style="margin-bottom:15px;"><i class="fa fa-lock input-icon input-icon-show"></i>
+                                            <label>Password</label>
+                                            <input name="session[password]" class="form-control" type="password" placeholder="my secret password" />
+                                        </div>
+                                        <input class="btn btn-primary" name="login" type="submit" value="Masuk" />
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3 class="mb15">Belum Bergabung?</h3>
+                                    <form method="post" action="save">
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
+                                            <label>Nama Lengkap</label>
+                                            <input name="user_fullname" class="form-control" placeholder="e.g. John Doe" type="text" required />
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-mobile input-icon input-icon-show"></i>
+                                            <label>Nomor HP</label>
+                                            <input name="user_contact" class="form-control" placeholder="e.g. John Doe" type="text" required />
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-envelope input-icon input-icon-show"></i>
+                                            <label>Email</label>
+                                            <input name="username" class="form-control" placeholder="e.g. johndoe@gmail.com" type="text" required />
+                                        </div>
+                                        <div class="form-group form-group-ghost form-group-icon-left" style="margin-bottom:15px;"><i class="fa fa-lock input-icon input-icon-show"></i>
+                                            <label>Password</label>
+                                            <input name="user_password" class="form-control" type="password" placeholder="my secret password" required />
+                                        </div>
+                                        <input class="btn btn-primary" type="submit" value="Daftar" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="footer-links">
+                            <li><a href="#">Tentang Futsalio</a>
+                            </li>
+                            <li><a href="#">Tim Kami</a>
+                            </li>
+                            <li><a href="#">Cara Pemesanan</a>
+                            </li>
+                            <li><a href="#">Karir</a>
+                            </li>
+                            <li><a href="#">Syarat & Ketentuan</a>
+                            </li>
+                            <li><a href="#">Kebijakan Privasi</a>
+                            </li>
+                        </ul>
                 </div>
-                <!--/div-->
-              </div>
             </div>
-            <div class="col-md-6">
-              <div class="single-footer">
-                <!--h4>Useful lnks</h4-->
-                <!--div class="footer-links"-->
-                <ul class="list-unstyled">
-                  <li><a href="">About Us</a></li>
-                  <li><a href="" class="active">Services</a></li>
-                  <li><a href="">Contact Us</a></li>
-                </ul>
-                <!--/div-->
-              </div>
-            </div>
+        </div>
+
+
+
+        <%= javascript_include_tag('futsalio/jquery.js') %>
+        <%= javascript_include_tag('futsalio/bootstrap.js') %>
+        <%= javascript_include_tag('futsalio/slimmenu.js') %>
+        <%= javascript_include_tag('futsalio/bootstrap-datepicker.js') %>
+        <%= javascript_include_tag('futsalio/bootstrap-timepicker.js') %>
+        <%= javascript_include_tag('futsalio/nicescroll.js') %>
+        <%= javascript_include_tag('futsalio/dropit.js') %>
+        <%= javascript_include_tag('futsalio/ionrangeslider.js') %>
+        <%= javascript_include_tag('futsalio/icheck.js') %>
+        <%= javascript_include_tag('futsalio/fotorama.js') %>
+        <%= javascript_include_tag('https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false') %>
+        <%= javascript_include_tag('futsalio/typeahead.js') %>
+        <%= javascript_include_tag('futsalio/card-payment.js') %>
+        <%= javascript_include_tag('futsalio/magnific.js') %>
+        <%= javascript_include_tag('futsalio/owl-carousel.js') %>
+        <%= javascript_include_tag('futsalio/fitvids.js') %>
+        <%= javascript_include_tag('futsalio/tweet.js') %>
+        <%= javascript_include_tag('futsalio/countdown.js') %>
+        <%= javascript_include_tag('futsalio/gridrotator.js') %>
+        <%= javascript_include_tag('futsalio/custom.js') %>
     </div>
-    <!--div class="row footer-copy">
-      <p><span>(C) webstie, All rights reserved</span> | <span>Graphic Designed by <a href="https://dribbble.com/siblu">Eftakher Alam</a></span> | <span> Web Designed by <a href="http://ohidul.me">Ohidul Islam</a></span> </p>
-      </div-->
-      </div>
-      </div>
-
-
-
-
-
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-      <%= javascript_include_tag('bootstrap.min.js') %>
-      <%= javascript_include_tag('owl.carousel.min.js') %>
-      <%= javascript_include_tag('wow.js') %>
-      <%= javascript_include_tag('main.js') %>
 </body>
+
+
+<!-- Mirrored from remtsoy.com/tf_templates/traveler/demo_v1_7/login-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 May 2017 14:14:26 GMT -->
 </html>
+
+
+
+

@@ -1,4 +1,11 @@
 <%= render 'layouts/header' %>
+<%  if flash[:notice] %>
+  <script>alert("<%= flash[:notice] %>");</script>
+<% end %>
+<%  if flash[:danger] %>
+  <script>alert("<%= flash[:danger] %>");</script>
+<% end %>
+
         <div class="bg-holder">
             <div class="bg-mask-darken"></div>
             <div class="bg-parallax"></div>
