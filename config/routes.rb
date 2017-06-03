@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   post 'register/save'
 
+  post '/save', to: 'register#save'
+
   get    '/login',   to: 'sessions#new'
 
   get '/logout',  to: 'sessions#destroy'
